@@ -1,0 +1,134 @@
+Your task is to identify whether any of the human value categories are relevant to the text.
+
+
+<instructions>
+  Review the definitions of each value category provided below.
+  For each value category, determine whether it is relevent to the text. Output 1 if the value category is relevant, or 0 if it is not.
+</instructions>
+
+<definitions>
+* "Power - dominance"
+  - Have influence: having people to ask for favors, increasing obligations, controlling events
+  - Have the right to command: experts directing others, fostering leadership, command hierarchies
+
+* "Power - resources"
+  - Have wealth: gaining material possessions, showing wealth, using money for power, financial prosperity
+
+* "Power - face"
+  - Have social recognition: gaining respect, avoiding humiliation, recognition for actions
+  - Have a good reputation: building or protecting public image, spreading reputation
+
+* "Achievement"
+  - Be ambitious: ambitions, fostering ambition, incentives for social mobility
+  - Have success: achieving success, being successful, recognizing achievements
+  - Be capable: acquiring competence, being effective, demonstrating competence
+  - Be intellectual: cognitive skill acquisition, reflective behavior, showing intelligence
+  - Be courageous: standing up for beliefs, fostering or showing courage
+
+* "Hedonism"
+  - Have pleasure: making life enjoyable, leisure, having fun, sensuous gratification
+
+* "Stimulation"
+  - Have an exciting life: experiencing foreign places, perspective-changing experiences, special activities
+  - Have a varied life: changing life aspects, moving flats easily, joining local clubs, participating in activities
+  - Be daring: risky actions, taking risks, fostering risk-taking
+
+* "Self-direction - thought"
+  - Be creative: allowing for more creativity or imagination, being more creative, fostering creativity, promoting imagination
+  - Be curious: being the more interesting option, fostering curiosity, making people more keen to learn, promoting discoveries, sparking interest
+  - Have freedom of thought: allowing people to figure things out on their own, allowing people to make up their mind, resulting in less censorship, resulting in less influence on people's thoughts
+
+* "Self-direction - action"
+  - Be choosing own goals: allowing people to choose what is best for them, decide on their life, follow their dreams
+  - Be independent: allowing people to plan on their own, fewer times needing consent
+  - Have freedom of action: being self-determined, doing things even if risky, doing what they want
+  - Have privacy: private spaces, time alone, less surveillance, control over disclosure
+
+* "Universalism - concern"
+  - Have equality: social equity, equal opportunity
+  - Be just: blind justice, fairness, protection of the vulnerable
+  - Have a world at peace: ceasefires, peace advocacy, humanitarian concern
+
+* "Universalism - nature"
+  - Be protecting the environment: avoiding pollution, nature restoration
+  - Have harmony with nature: avoiding chemicals/GMO, considering environmental impact
+  - Have a world of beauty: art, nature appreciation, aesthetics
+
+* "Universalism - tolerance"
+  - Be broadminded: intergroup dialogue, challenging prejudice, tolerating difference
+  - Have the wisdom to accept others: maturity in accepting disagreement, fewer fanatics
+
+* "Universalism - objectivity"
+  - Be logical: rational thinking, scientific methods, analytical reasoning
+  - Have an objective view: neutrality, unbiased perspectives, informed decision-making
+
+* "Benevolence - caring"
+  - Be helpful: aiding group members, readiness to help
+  - Be honest: fostering honesty, recognizing honesty in others
+  - Be forgiving: offering second chances, promoting mercy and redemption
+  - Have the own family secured: protecting and caring for family
+  - Be loving: prioritizing others’ well-being, expressing affection and compassion
+
+* "Benevolence - dependability"
+  - Be responsible: having clear responsibilities, being reliable
+  - Have loyalty towards friends: trustworthy friendship, backing friends
+
+* "Tradition"
+  - Be respecting traditions: following family customs, preserving traditions
+  - Be holding religious faith: devoting to faith, supporting religious customs, promoting piety
+
+* "Humility"
+  - Be humble: downplaying arrogance, highlighting group over self, giving back to society
+  - Have life accepted as is: accepting fate, satisfaction with one’s lot in life
+
+* "Conformity - rules"
+  - Be compliant: obeying laws or rules, fulfilling obligations
+  - Be self-disciplined: exercising restraint, rule-following even when unwatched
+  - Be behaving properly: observing manners, social conventions
+
+* "Conformity - interpersonal"
+  - Be polite: avoiding upsetting others, being considerate
+  - Be honoring elders: respecting parents and elders, showing deference
+
+* "Security - personal"
+  - Have a sense of belonging: forming groups, displaying membership, mutual care
+  - Have good health: avoiding illness, physical and mental well-being, staying healthy
+  - Have no debts: avoiding indebtedness, reciprocating favors
+  - Be neat and tidy: cleanliness, orderliness
+  - Have a comfortable life: subsistence income, financial security, happiness
+
+* "Security - societal"
+  - Have a safe country: crime prevention, defending citizens, strong governance
+  - Have a stable society: maintaining social structure, avoiding chaos, promoting social order
+</definitions>
+
+<text>
+{text}
+</text>
+
+<response format>
+Provide the answer by filling in 1 or 0 according to the instructions, in the JSON format below.
+</response format>
+
+{{
+    "Power - dominance": ,
+    "Power - resources": ,
+    "Power - face": ,
+    "Achievement": ,
+    "Hedonism": ,
+    "Stimulation": ,
+    "Self-direction - thought": ,
+    "Self-direction - action": ,
+    "Universalism - concern": ,
+    "Universalism - nature": ,
+    "Universalism - tolerance": ,
+    "Universalism - objectivity": ,
+    "Benevolence - caring": ,
+    "Benevolence - dependability": ,
+    "Tradition": ,
+    "Humility": ,
+    "Conformity - rules": ,
+    "Conformity - interpersonal": ,
+    "Security - personal": ,
+    "Security - societal":
+}}

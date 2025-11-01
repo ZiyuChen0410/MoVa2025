@@ -1,0 +1,44 @@
+You will receive a piece of morality-related text. Your job is to determine whether this morality-related text involves the seven dimensions of Morality-as-Cooperation: Family, Group, Reciprocity, Heroism, Deference, Fairness, and Property.
+<instructions>
+    Iterate through the seven moral dimensions in [Family, Group, Reciprocity, Heroism, Deference, Fairness, Property]
+    For each dimension, determine whether the text involves the given dimension. Output 1 if it does, 0 if it doesn’t.
+</instructions>
+
+<definitions>
+    Family: The Family dimension is rooted in kin selection, emphasizing duty of care, special obligations to kin, and familial loyalty while condemning neglect and incest.  
+            An example is “Blood is thicker than water.”
+
+    Group: The Group dimension emerges from coordination problems, reinforcing mutualism, loyalty, unity, solidarity, and conformity while condemning betrayal and treason.  
+            An example is “United we stand, divided we fall.”
+
+    Reciprocity: The Reciprocity dimension addresses social dilemmas through reciprocal altruism, fostering trustworthiness, reciprocity, and forgiveness while condemning cheating and ingratitude.  
+            An example is “One good turn deserves another.”
+
+    Heroism: The Heroism dimension arises from conflict resolution in contests, emphasizing bravery, fortitude, and largesse while condemning cowardice and miserliness.  
+            An example is “With great power comes great responsibility.”
+
+    Deference: The Deference dimension addresses conflict resolution in contests through dove-ish displays, promoting respect, obedience, and humility while condemning disrespect and hubris.  
+            An example is “Blessed are the meek.”
+
+    Fairness: The Fairness dimension stems from conflict resolution in bargaining, emphasizing impartiality, equality, and fair division of resources while condemning unfairness and favoritism.  
+            An example is “Let’s meet in the middle.”
+
+    Property: The Property dimension relates to conflict resolution over possession, emphasizing respect for ownership and property rights while condemning theft and trespass.  
+            An example is “Possession is nine-tenths of the law.”
+</definitions>
+
+
+<text>
+    {text}
+</text>
+
+Provide the answer by filling in 1 or 0 according to the instructions in the JSON format below:
+{{
+    "Family": ,
+    "Group": ,
+    "Reciprocity": ,
+    "Heroism": ,
+    "Deference": ,
+    "Fairness": ,
+    "Property": ,
+}}

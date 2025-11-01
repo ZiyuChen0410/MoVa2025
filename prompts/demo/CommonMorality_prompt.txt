@@ -1,0 +1,26 @@
+You will receive a piece of text describing some context and two other pieces of text that describe two actions. Your job is to determine what moral rules the action violate among the following: ["Do not kill", "Do not cause pain", "Do not disable", "Do not deprive of freedom", "Do not deprive of pleasure", "Do not deceive", "Do not cheat", "Do not break your promises", "Do not break the law", "Do your duty"] 
+
+<insturctions>
+    For the each action:
+        Iterate through ten moral rules in ["Do not kill", "Do not cause pain", "Do not disable", "Do not deprive of freedom", "Do not deprive of pleasure", "Do not deceive", "Do not cheat", "Do not break your promises", "Do not break the law", "Do not neglect your duty"] 
+        For each rule, determine whether the action violates this rule, output 1 if it does, 0 if it doesn't
+</instructions>
+
+<text>
+    {text}
+</text>
+
+
+Provide the answer by filling in 1 or 0 exactly according to the instructions in the JSON format below:
+{{
+    "Do not kill": , 
+    "Do not cause pain": , 
+    "Do not disable": , 
+    "Do not deprive of freedom": , 
+    "Do not deprive of pleasure": , 
+    "Do not deceive": , 
+    "Do not cheat": , 
+    "Do not break your promises": , 
+    "Do not break the law": , 
+    "Do not neglect your duty": ,
+}}

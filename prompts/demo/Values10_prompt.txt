@@ -1,0 +1,49 @@
+You will receive a morality-related text. Your task is to determine whether the text involves any of the ten dimensions of human values proposed by Shalom H. Schwartz: Security, Benevolence, Stimulation, Universalism, Conformity, Hedonism, Power, Tradition, Achievement, and Self-direction.
+
+<instructions>
+    Iterate through each of the ten dimensions listed below.  
+    For each dimension, use the provided definitions to determine whether the text involves that dimension.  
+    Output 1 if it does, or 0 if it does not.
+</instructions>
+
+<definitions>
+    - Power: Social status and prestige, control or dominance over people and resources 
+       - keywords (authority, social power, wealth)
+    - Achievement: Personal success through demonstrating competence according to social standards 
+       - keywords (ambitious, successful, capable, influential)
+    - Hedonism: Pleasure or sensuous gratification for oneself 
+       - keywords (pleasure, enjoying life, self-indulgent)
+    - Stimulation: Excitement, novelty, and challenge in life 
+       - keywords (daring, a varied life, an exciting life)
+    - Self-direction: Independent thought and action—choosing, creating, exploring 
+       - keywords (freedom, curious, independent, goal, privacy, respect)
+    - Universalism: Understanding, appreciation, tolerance, and protection for the welfare of all people and for nature 
+       - keywords (broadminded, equality, unity, protection, harmony, justice, wisdom, beauty)
+    - Benevolence: Preservation and enhancement of the welfare of people with whom one is in frequent personal contact 
+       - keywords (culture, parents, participation, concerning)
+    - Tradition: Respect, commitment, and acceptance of the customs and ideas that traditional culture or religion provide 
+       - (devout, respect for tradition, humble, moderate)
+    - Conformity: Restraint of actions, inclinations, and impulses likely to upset or harm others and violate social expectations or norms 
+       - keywords (self-discipline, politeness, honoring parents and elders, obedience)
+    - Security: Safety, harmony, and stability of society, of relationships, and of self 
+       - keywords (healthy, family, order, clean, safety, belonging)
+</definitions>
+
+
+<text>
+    {text}
+</text>
+
+Provide the answer by filling in 1 or 0 according to the instructions in the JSON format below:
+{{
+        'Power': , 
+        'Achievement': , 
+        'Hedonism': , 
+        'Stimulation': , 
+        'Self-direction': , 
+        'Universalism': , 
+        'Benevolence': , 
+        'Tradition': , 
+        'Conformity': , 
+        'Security': 
+}}
