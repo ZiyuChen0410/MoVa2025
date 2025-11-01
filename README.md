@@ -5,7 +5,7 @@
 
 ---
 
-## 📦 Dataset Overview
+## A. Dataset Overview
 
 This overview contains 13 labeled datasets and 3 questionnaires for analyzing human morals and values across four major theoretical frameworks. These resources support tasks such as classification, value alignment, and cross-framework generalization using natural language texts from diverse domains.
 
@@ -69,7 +69,7 @@ year={2025}
 
 ---
 
-## 🧪 Demo Instructions
+## B. Demo Instructions
 
 This section explains how to generate dimension scores using the provided scoring script:
 ```
@@ -192,4 +192,5 @@ python scripts/demo/generate_dim_score_demo.py \
 | `--verbose` | Print detailed logs during execution |
 
 ----
-## 📊 Evaluation — Coming Soon
+## C. Evaluation — Coming Soon
+
