@@ -66,3 +66,130 @@ year={2025}
 }
 ```
 **Together with the original dataset references listed in our documentation.**
+
+---
+
+## 🧪 Demo Instructions
+
+This section explains how to generate dimension scores using the provided scoring script:
+```
+scripts/demo/generate_dim_score_demo.py
+```
+
+The script supports multiple models and providers, including **OpenAI** (e.g., `gpt-4o-mini`) and **DeepSeek** (e.g.`deepseek-chat`), for evaluating moral and value dimensions under different frameworks (MFT, MAC, Human Values, Common Morality).
+
+---
+
+### 🔧 Setup
+
+```
+# 1. Clone the repository
+git clone https://github.com/ZiyuChen0410/MoVa2025
+
+# 2. Activate your virtual environment
+cd moral_llm
+source bin/activate
+
+# 3. Return to the project root if needed
+cd ~
+cd MoVa2025
+```
+
+---
+
+### 🚀 Run Scoring (OpenAI or DeepSeek)
+
+If you are running from the repo root, you can call the script directly.  
+If running from outside, prepend with `PYTHONPATH=/your/path/to/MoVa2025`.
+
+---
+
+
+### ✅ Example: MFT (with Liberty)
+
+```
+python scripts/demo/generate_dim_score_demo.py \
+    --api_key "sk-...your_api_key..." \
+    --api "openai" \
+    --deployment_name "gpt-4o-mini" \
+    --input_file "data/demo.csv" \
+    --prompt_file "prompts/demo/MFT_all@once_prompt.txt" \
+    --out_file "output/demo/MFT_gpt4omini_scores.csv" \
+    --answer_file "output/demo/MFT_gpt4omini_answers.csv" \
+    --mode "mft" \
+    --max_workers 5 \
+    --theory "mft" \
+    --with_liberty True
+```
+
+### ✅ Example: Human Values (20 subcategories)
+
+```
+python scripts/demo/generate_dim_score_demo.py \
+    --api_key "sk-...your_api_key..." \
+    --api "openai" \
+    --deployment_name "gpt-4o-mini" \
+    --input_file "data/demo.csv" \
+    --prompt_file "prompts/demo/Values20_prompt.txt" \
+    --out_file "output/value20_demo/gpt4omini_scores.csv" \
+    --answer_file "output/value20_demo/gpt4omini_answers.csv" \
+    --mode "value20" \
+    --max_workers 5 \
+    --theory "value20"
+```
+
+### ✅ Example: Morality-as-Cooperation (MAC)
+
+```
+python scripts/demo/generate_dim_score_demo.py \
+    --api_key "sk-...your_api_key..." \
+    --api "openai" \
+    --deployment_name "gpt-4o-mini" \
+    --input_file "data/demo.csv" \
+    --prompt_file "prompts/demo/MAC_definition_prompt.txt" \
+    --out_file "output/demo/MAC_gpt4omini_scores.csv" \
+    --answer_file "output/demo/MAC_gpt4omini_answers.csv" \
+    --mode "mac" \
+    --max_workers 5 \
+    --theory "mac"
+```
+
+### ✅ Example: Common Morality
+
+```
+python scripts/demo/generate_dim_score_demo.py \
+    --api_key "sk-...your_api_key..." \
+    --api "openai" \
+    --deployment_name "gpt-4o-mini" \
+    --input_file "data/demo.csv" \
+    --prompt_file "prompts/demo/CommonMorality_prompt_prompt.txt" \
+    --out_file "output/value20_demo/cm_gpt4omini_scores.csv" \
+    --answer_file "output/value20_demo/cm_gpt4omini_answers.csv" \
+    --mode "common_morality" \
+    --max_workers 5 \
+    --theory "common_morality"
+```
+---
+
+### 🔁 Key Parameters Explained
+
+| Argument | Description |
+|----------|-------------|
+| `--api` | Which API to use: `openai`, `deepseek`, etc. |
+| `--deployment_name` | Model name or deployment ID (`gpt-4o-mini`, `deepseek-chat`, etc.) |
+| `--api_key` | Your OpenAI key (required for `openai`, not for `deepseek`) |
+| `--input_file` | Input CSV file with text samples |
+| `--prompt_file` | Prompt template to use (few-shot or zero-shot) |
+| `--out_file` | Where to save the scored output |
+| `--answer_file` | Where to save raw model completions |
+| `--mode` | Logic block for scoring (`mft`, `mac`, `value20`, `common_morality`, etc.) |
+| `--theory` | Moral theory (`mft`, `mac`, `value10`, `value20`, `common_morality`) |
+| `--max_workers` | Number of threads for parallel API calls |
+| `--with_liberty` | Whether to include the "Liberty" foundation (only for MFT) |
+| `--top_p`, `--temperature` | Decoding settings |
+| `--logprobs`, `--top_logprobs` | Enable and control logprob output |
+| `--to_fix` | If True, fix rows with non-floatable outputs |
+| `--verbose` | Print detailed logs during execution |
+
+----
+## 📊 Evaluation — Coming Soon
